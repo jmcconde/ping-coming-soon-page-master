@@ -135,6 +135,7 @@ body {
 .email-input {
   width: 80%;
   max-width: 360px;
+  height: 46px;
   padding: .7rem 2rem;
   font-weight: var(--fw-light);
   font-size: .9rem;
@@ -162,6 +163,7 @@ body {
 
 .submit-btn {
   width: 80%;
+  height: 46px;
   max-width: 360px;
   padding: .7rem 1rem;
   background-color: var(--clr-blue);
@@ -252,8 +254,8 @@ body {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .form-controll {
