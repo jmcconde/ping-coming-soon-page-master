@@ -1,0 +1,282 @@
+:root {
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-pale-blue: hsl(223, 100%, 88%);
+    --clr-light-red: hsl(354, 100%, 66%);
+    --clr-grey: hsl(0, 0%, 59%);
+    --clr-dark-blue: hsl(209, 33%, 12%);
+
+    --ff-primary: 'Libre Franklin', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 600;
+    --fw-bold: 700
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+  display: grid;
+  place-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: var(--ff-primary);
+  max-height: 100vh;
+}
+
+.header {
+  margin-top: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 2rem;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 65px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-title {
+  font-weight: var(--fw-light);
+  color: var(--clr-grey);
+  font-size: 1.4rem;
+}
+
+.accent {
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-bold);
+}
+
+.hero-description {
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-light);
+  font-size: .85rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.form-controll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.email-input {
+  width: 80%;
+  max-width: 360px;
+  padding: .7rem 2rem;
+  font-weight: var(--fw-light);
+  font-size: .9rem;
+  border-radius: 2rem;
+  border: 1px solid var(--clr-grey);
+}
+
+.email-input:focus {
+  outline: none;
+  border: 1px solid var(--clr-blue);
+}
+
+.email-input::placeholder {
+  color: hsla(0, 0%, 59%, 0.548);
+}
+
+.error {
+  border: 1px solid var(--clr-light-red);
+}
+
+.error-msg {
+  color: var(--clr-light-red);
+  font-size: .6rem;
+}
+
+.submit-btn {
+  width: 80%;
+  max-width: 360px;
+  padding: .7rem 1rem;
+  background-color: var(--clr-blue);
+  color: #fff;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: .85rem;
+  transition: background-color .4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.submit-btn:hover {
+  background-color: hsl(223, 85%, 68%);
+}
+
+.hero-img {
+  margin-top: 4rem;
+  max-width: min(100%, 450px);
+}
+
+.footer {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-link {
+  text-decoration: none;
+  color: var(--clr-blue);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-content: center;
+  border: 1px solid hsla(0, 0%, 59%, 0.26);
+  border-radius: 50%;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+.social-media-link:hover {
+  background-color: var(--clr-blue);
+  color: #fff;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+} 
+
+.icon::before {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.copyright {
+  color: var(--clr-grey);
+  font-size: var(--fw-light);
+  font-size: .7rem;
+}
+
+@media (min-width: 769px) {
+
+  .hero {
+    gap: 0.4rem;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: .9rem;
+  }
+
+  .subscribe-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+  }
+
+  .form-controll {
+    max-width: 360px ;
+  }
+
+  .error-msg {
+    align-self: flex-start;
+    margin-left: 1rem;
+    font-size: .7rem;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 120px;
+  }
+
+  .hero-img {
+    margin-top: 2.8rem;
+    max-width: 600px;
+  }
+
+}
